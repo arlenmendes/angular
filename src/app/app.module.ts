@@ -1,14 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Componentes da aplicação
 import { AppComponent } from './app.component';
+import {MeuPrimeiroComponent} from "./meu-primeiro/meu-primeiro.component";
+import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
+//Modulos da aplicação
+import {CursosModule} from "./cursos/cursos.module";
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MeuPrimeiroComponent,
+    MeuPrimeiro2Component,
+    DataBindingComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CursosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

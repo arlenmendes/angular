@@ -1,0 +1,69 @@
+<!-- <section>
+  <article>
+    <h3>Interpolação</h3>
+    <p>{{ url }}</p>
+    <p>Resultado de 1 + 1: {{ 1 + 1 }}</p>
+    <p>Chamada função: {{ getValor() }}</p>
+    <p>Curso angular: {{ getCurtirCurso() }}</p>
+  </article>
+  <article>
+    <h3>Property binding</h3>
+    <img src="{{ urlImagem }}" alt="NEVER NET">
+    <img [src]="urlImagem" alt="NEVER NET">
+    
+  </article>
+  <article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe
+      <select name="" id="" #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-danger">Danger</option>
+        <option value="alert-warning">Atenção</option>
+      </select>
+      <br><br>
+
+      <div class="alert {{ classe.value }}" role="alert">
+        Colorido conforme a seleção
+      </div>
+
+      <div class="alert alert-danger" role="alert"
+      [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        So aparece em caso de erro
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        This is a success alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        This is a danger alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+        This is a warning alert—check it out!
+      </div>
+    </div>
+  </article>
+</section> -->
+<section>
+  <article>
+    <h3>Event  Binding</h3>
+    <div>
+      <button (click)="botaoClicado()"
+        class="btn btn-primary">
+        Me Clique!
+      </button>
+      <br><br>
+
+      <input (keyup)="onKeyUp($event)"
+      type="text">
+      <p>Valor atual: {{ valorAtual }}</p>
+      <br><br>
+      <p
+      (mouseover)="mouseOver()"
+      (mouseout)="mouseOver()"
+      [class.highlight]="isMouseOver">
+      Passe o mouse</p>
+
+    </div>
+  </article>
+</section>
